@@ -18,3 +18,7 @@ td {
 tr#row7 td {
 	border: none;
 }
+
+.chip {
+	background-color: black;
+}
