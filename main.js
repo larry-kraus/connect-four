@@ -1,5 +1,3 @@
-var r1c1 = document.getElementById('r1c1');
-
 var placeChipColumn1 = function() {
 	var status1 = (r1c1.getAttribute('class') === "chip1" || r1c1.getAttribute('class') === "chip2");
 	var status2 = (r2c1.getAttribute('class') === "chip1" || r2c1.getAttribute('class') === "chip2");
@@ -304,6 +302,7 @@ var reset = function() {
 	r4c7.removeAttribute('class');
 	r5c7.removeAttribute('class');
 	r6c7.removeAttribute('class');
+	return turnCounter = 1;
 }
 
 var button1 = document.getElementById('placeButton1');
@@ -448,7 +447,6 @@ var conclusion = function() {
 	var status572 = r5c7.getAttribute('class') === "chip2";
 	var status672 = r6c7.getAttribute('class') === "chip2";
 
-
 	var combo1 = [status111, status121, status131, status141];
 	var combo2 = [status121, status131, status141, status151];
 	var combo3 = [status131, status141, status151, status161];
@@ -477,7 +475,7 @@ var conclusion = function() {
 	var combo26 = [status211, status311, status411, status511];
 	var combo27 = [status311, status411, status511, status611];
 	var combo28 = [status121, status221, status321, status421];
-	var combo21 = [status221, status321, status421, status521];
+	var combo29 = [status221, status321, status421, status521];
 	var combo30 = [status321, status421, status521, status621];
 	var combo31 = [status131, status231, status331, status431];
 	var combo32 = [status231, status331, status431, status531];
@@ -487,7 +485,7 @@ var conclusion = function() {
 	var combo36 = [status341, status441, status541, status641];
 	var combo37 = [status151, status251, status351, status451];
 	var combo38 = [status251, status351, status451, status551];
-	var combo31 = [status351, status451, status551, status651];
+	var combo39 = [status351, status451, status551, status651];
 	var combo40 = [status161, status261, status361, status461];
 	var combo41 = [status261, status361, status461, status561];
 	var combo42 = [status361, status461, status561, status661];
@@ -497,7 +495,7 @@ var conclusion = function() {
 	var combo46 = [status411, status321, status231, status141];
 	var combo47 = [status511, status421, status331, status241];
 	var combo48 = [status421, status331, status241, status151];
-	var combo41 = [status611, status521, status431, status341];
+	var combo49 = [status611, status521, status431, status341];
 	var combo50 = [status521, status431, status341, status251];
 	var combo51 = [status431, status341, status251, status161];
 	var combo52 = [status621, status531, status441, status351];
@@ -507,7 +505,7 @@ var conclusion = function() {
 	var combo56 = [status631, status541, status451, status361];
 	var combo57 = [status641, status551, status461, status371];
 	var combo58 = [status141, status251, status361, status471];
-	var combo51 = [status131, status241, status351, status461];
+	var combo59 = [status131, status241, status351, status461];
 	var combo60 = [status241, status351, status461, status571];
 	var combo61 = [status121, status231, status341, status451];
 	var combo62 = [status231, status341, status451, status561];
@@ -588,48 +586,33 @@ var conclusion = function() {
 	var combo137 = [status322, status432, status542, status652];
 	var combo138 = [status312, status422, status532, status642];
 
-	//var win = [true, true, true, true];
-/*
-if (combo1[0] == true && combo1[1] == true && combo1[2] == true && combo1[3] == true) {
-	console.log('hooray');
-}
+	var comboArray = [combo1, combo2, combo3, combo4, combo5, combo6, combo7, combo8, combo9,
+combo10, combo11, combo12, combo13, combo14, combo15, combo16, combo17, combo18, combo19, combo20, combo21, combo22, combo23, 
+combo24, combo25, combo26, combo27, combo28, combo29, combo30, combo31, combo32, combo33, combo34, combo35, combo36, 
+combo37, combo38, combo39, combo40, combo41, combo42, combo43, combo44, combo45, combo46, combo47, combo48, combo49, 
+combo50, combo51, combo52, combo53, combo54, combo55, combo56, combo57, combo58, combo59, combo60, combo61, combo62, combo63, 
+combo64, combo65, combo66, combo67, combo68, combo69, combo70, combo71, combo72, combo73, combo74, combo75, combo76, 
+combo77, combo78, combo79, combo80, combo81, combo82, combo83, combo84, combo85, combo86, combo87, combo88, combo89, combo90, 
+combo91, combo92, combo93, combo94, combo95, combo96, combo97, combo98, combo99, combo100, combo101, combo102, combo103, 
+combo104, combo105, combo106, combo107, combo108, combo109, combo110, combo111, combo112, combo113, combo114, combo115, 
+combo116, combo117, combo118, combo119, combo120, combo121, combo122, combo123, combo124, combo125, combo126, 
+combo127, combo128, combo129, combo130, combo131, combo132, combo133, combo134, combo135, combo136, combo137, combo138];
 
-for (var i = 1; i < 139; i++) {
-	var comboNum = ("combo" + "i")
-	if (comboNum[0] == true && comboNum[1] == true && comboNum[2] == true && comboNum[3] == true) {
-		console.log("We have a winner!");
-	}
-}
-
-console.log(combo1);
-var i = 1;
-var combo;
-var comboX = ("combo" + "i");
-console.log(comboX);
-console.log(comboX.val());
-*/
-
-	var comboArray = [combo1, combo2, combo3, combo4, combo5, combo6, combo7, combo8];
-//console.log(comboArray[0][0]);
-//console.log(comboArray[0] === [true, true, true, true]);
-
-	for (var j = 0; j < 8; j++) {
+	for (var j = 0; j < 69; j++) {
 		if (comboArray[j][0] === true && comboArray[j][1] === true && comboArray[j][2] === true && comboArray[j][3] === true) {
-			console.log("shityeah");
+			alert("RED WINS!");
+		}
+	}
+	for (var j = 69; j < 138; j++) {
+		if (comboArray[j][0] === true && comboArray[j][1] === true && comboArray[j][2] === true && comboArray[j][3] === true) {
+			alert("BLUE WINS!");
 		}
 	}
 
-
+	if (turnCounter === 42) {
+		alert("The game has ended in a tie");
+	}
 }
-/*
-	switch(status111, status211, status311, status411) {
-		case (status111 && status211 && status311 && status411):
-			console.log("WINNER!");
-			break;
-		default:
-			console.log("nothin...");
-	}	*/	
-
 
 console.log("aww yeahh");
 
