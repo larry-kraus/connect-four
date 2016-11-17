@@ -422,7 +422,7 @@ var conclusion = function() {
 	var status332 = r3c3.getAttribute('class') === "chip2";
 	var status432 = r4c3.getAttribute('class') === "chip2";
 	var status532 = r5c3.getAttribute('class') === "chip2";
-	var status642 = r6c3.getAttribute('class') === "chip2";
+	var status632 = r6c3.getAttribute('class') === "chip2";
 	var status142 = r1c4.getAttribute('class') === "chip2";
 	var status242 = r2c4.getAttribute('class') === "chip2";
 	var status342 = r3c4.getAttribute('class') === "chip2";
@@ -449,15 +449,15 @@ var conclusion = function() {
 	var status672 = r6c7.getAttribute('class') === "chip2";
 
 
-	var combo01 = [status111, status121, status131, status141];
-	var combo02 = [status121, status131, status141, status151];
-	var combo03 = [status131, status141, status151, status161];
-	var combo04 = [status141, status151, status161, status171];
-	var combo05 = [status211, status221, status231, status241];
-	var combo06 = [status221, status231, status241, status251];
-	var combo07 = [status231, status241, status251, status261];
-	var combo08 = [status241, status251, status261, status271];
-	var combo09 = [status311, status321, status331, status341];
+	var combo1 = [status111, status121, status131, status141];
+	var combo2 = [status121, status131, status141, status151];
+	var combo3 = [status131, status141, status151, status161];
+	var combo4 = [status141, status151, status161, status171];
+	var combo5 = [status211, status221, status231, status241];
+	var combo6 = [status221, status231, status241, status251];
+	var combo7 = [status231, status241, status251, status261];
+	var combo8 = [status241, status251, status261, status271];
+	var combo9 = [status311, status321, status331, status341];
 	var combo10 = [status321, status331, status341, status351];
 	var combo11 = [status331, status341, status351, status361];
 	var combo12 = [status341, status351, status361, status371];
@@ -588,6 +588,39 @@ var conclusion = function() {
 	var combo137 = [status322, status432, status542, status652];
 	var combo138 = [status312, status422, status532, status642];
 
+	//var win = [true, true, true, true];
+/*
+if (combo1[0] == true && combo1[1] == true && combo1[2] == true && combo1[3] == true) {
+	console.log('hooray');
+}
+
+for (var i = 1; i < 139; i++) {
+	var comboNum = ("combo" + "i")
+	if (comboNum[0] == true && comboNum[1] == true && comboNum[2] == true && comboNum[3] == true) {
+		console.log("We have a winner!");
+	}
+}
+
+console.log(combo1);
+var i = 1;
+var combo;
+var comboX = ("combo" + "i");
+console.log(comboX);
+console.log(comboX.val());
+*/
+
+	var comboArray = [combo1, combo2, combo3, combo4, combo5, combo6, combo7, combo8];
+//console.log(comboArray[0][0]);
+//console.log(comboArray[0] === [true, true, true, true]);
+
+	for (var j = 0; j < 8; j++) {
+		if (comboArray[j][0] === true && comboArray[j][1] === true && comboArray[j][2] === true && comboArray[j][3] === true) {
+			console.log("shityeah");
+		}
+	}
+
+
+}
 /*
 	switch(status111, status211, status311, status411) {
 		case (status111 && status211 && status311 && status411):
@@ -596,7 +629,7 @@ var conclusion = function() {
 		default:
 			console.log("nothin...");
 	}	*/	
-}
+
 
 console.log("aww yeahh");
 
