@@ -1,10 +1,4 @@
 var r1c1 = document.getElementById('r1c1');
-var r2c1 = document.getElementById('r2c1');
-var r3c1 = document.getElementById('r3c1');
-var r4c1 = document.getElementById('r4c1');
-var r5c1 = document.getElementById('r5c1');
-var r6c1 = document.getElementById('r6c1');
-var r1c2 = document.getElementById('r1c2');
 
 var placeChipColumn1 = function() {
 	var status1 = (r1c1.getAttribute('class') === "chip");
@@ -222,6 +216,14 @@ button6.addEventListener('click', placeChipColumn6);
 
 var button7 = document.getElementById('placeButton7');
 button7.addEventListener('click', placeChipColumn7);
+
+var resetButton = document.getElementById('resetGame');
+resetButton.addEventListener('click', reset);
+
+var reset = function() {
+	r1c1.removeAttribute('class', 'chip');
+
+}
 
 
 console.log("aww yeahh");
