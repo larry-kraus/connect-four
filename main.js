@@ -196,6 +196,54 @@ var placeChipColumn7 = function() {
 	}
 }
 
+var allDivs = document.getElementsByTagName('td');
+
+var reset = function() {
+	r1c1.removeAttribute('class', 'chip');
+	r2c1.removeAttribute('class', 'chip');
+	r3c1.removeAttribute('class', 'chip');
+	r4c1.removeAttribute('class', 'chip');
+	r5c1.removeAttribute('class', 'chip');
+	r6c1.removeAttribute('class', 'chip');
+	r1c2.removeAttribute('class', 'chip');
+	r2c2.removeAttribute('class', 'chip');
+	r3c2.removeAttribute('class', 'chip');
+	r4c2.removeAttribute('class', 'chip');
+	r5c2.removeAttribute('class', 'chip');
+	r6c2.removeAttribute('class', 'chip');
+	r1c3.removeAttribute('class', 'chip');
+	r2c3.removeAttribute('class', 'chip');
+	r3c3.removeAttribute('class', 'chip');
+	r4c3.removeAttribute('class', 'chip');
+	r5c3.removeAttribute('class', 'chip');
+	r6c3.removeAttribute('class', 'chip');
+	r1c4.removeAttribute('class', 'chip');
+	r2c4.removeAttribute('class', 'chip');
+	r3c4.removeAttribute('class', 'chip');
+	r4c4.removeAttribute('class', 'chip');
+	r5c4.removeAttribute('class', 'chip');
+	r6c4.removeAttribute('class', 'chip');
+	r1c5.removeAttribute('class', 'chip');
+	r2c5.removeAttribute('class', 'chip');
+	r3c5.removeAttribute('class', 'chip');
+	r4c5.removeAttribute('class', 'chip');
+	r5c5.removeAttribute('class', 'chip');
+	r6c5.removeAttribute('class', 'chip');
+	r1c6.removeAttribute('class', 'chip');
+	r2c6.removeAttribute('class', 'chip');
+	r3c6.removeAttribute('class', 'chip');
+	r4c6.removeAttribute('class', 'chip');
+	r5c6.removeAttribute('class', 'chip');
+	r6c6.removeAttribute('class', 'chip');
+	r1c7.removeAttribute('class', 'chip');
+	r2c7.removeAttribute('class', 'chip');
+	r3c7.removeAttribute('class', 'chip');
+	r4c7.removeAttribute('class', 'chip');
+	r5c7.removeAttribute('class', 'chip');
+	r6c7.removeAttribute('class', 'chip');
+}
+
+
 var button1 = document.getElementById('placeButton1');
 button1.addEventListener('click', placeChipColumn1);
 
@@ -220,10 +268,7 @@ button7.addEventListener('click', placeChipColumn7);
 var resetButton = document.getElementById('resetGame');
 resetButton.addEventListener('click', reset);
 
-var reset = function() {
-	r1c1.removeAttribute('class', 'chip');
 
-}
 
 
 console.log("aww yeahh");
