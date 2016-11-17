@@ -1,202 +1,265 @@
 var r1c1 = document.getElementById('r1c1');
 
 var placeChipColumn1 = function() {
-	var status1 = (r1c1.getAttribute('class') === "chip");
-	var status2 = (r2c1.getAttribute('class') === "chip");
-	var status3 = (r3c1.getAttribute('class') === "chip");
-	var status4 = (r4c1.getAttribute('class') === "chip");
-	var status5 = (r5c1.getAttribute('class') === "chip");
-	var status6 = (r6c1.getAttribute('class') === "chip");
+	var status1 = (r1c1.getAttribute('class') === "chip1" || r1c1.getAttribute('class') === "chip2");
+	var status2 = (r2c1.getAttribute('class') === "chip1" || r2c1.getAttribute('class') === "chip2");
+	var status3 = (r3c1.getAttribute('class') === "chip1" || r3c1.getAttribute('class') === "chip2");
+	var status4 = (r4c1.getAttribute('class') === "chip1" || r4c1.getAttribute('class') === "chip2");
+	var status5 = (r5c1.getAttribute('class') === "chip1" || r5c1.getAttribute('class') === "chip2");
+	var status6 = (r6c1.getAttribute('class') === "chip1" || r6c1.getAttribute('class') === "chip2");
 
-	if (status5) {
+	if (status6) {
+		alert('This column is full!');
+	}
+	else if (status5) {
 		r6c1.setAttribute('class', 'chip');
+		whosTurn(r6c1);
 	}
 	else if (status4) {
 		r5c1.setAttribute('class', 'chip');
+		whosTurn(r5c1);
 	}
 	else if (status3) {
 		r4c1.setAttribute('class', 'chip');
+		whosTurn(r4c1);
 	}
 	else if (status2) {
 		r3c1.setAttribute('class', 'chip');
+		whosTurn(r3c1);
 	}
 	else if (status1) {
 		r2c1.setAttribute('class', 'chip');
+		whosTurn(r2c1);
 	}
 	else {
 		r1c1.setAttribute('class', 'chip');
+		whosTurn(r1c1);
 	}
 }
 
 var placeChipColumn2 = function() {
-	var status1 = (r1c2.getAttribute('class') === "chip");
-	var status2 = (r2c2.getAttribute('class') === "chip");
-	var status3 = (r3c2.getAttribute('class') === "chip");
-	var status4 = (r4c2.getAttribute('class') === "chip");
-	var status5 = (r5c2.getAttribute('class') === "chip");
-	var status6 = (r6c2.getAttribute('class') === "chip");
+	var status1 = (r1c2.getAttribute('class') === "chip1" || r1c2.getAttribute('class') === "chip2");
+	var status2 = (r2c2.getAttribute('class') === "chip1" || r2c2.getAttribute('class') === "chip2");
+	var status3 = (r3c2.getAttribute('class') === "chip1" || r3c2.getAttribute('class') === "chip2");
+	var status4 = (r4c2.getAttribute('class') === "chip1" || r4c2.getAttribute('class') === "chip2");
+	var status5 = (r5c2.getAttribute('class') === "chip1" || r5c2.getAttribute('class') === "chip2");
+	var status6 = (r6c2.getAttribute('class') === "chip1" || r6c2.getAttribute('class') === "chip2");
 
-	if (status5) {
+	if (status6) {
+		alert('This column is full!');
+	}
+	else if (status5) {
 		r6c2.setAttribute('class', 'chip');
+		whosTurn(r6c2);
 	}
 	else if (status4) {
 		r5c2.setAttribute('class', 'chip');
+		whosTurn(r5c2);
 	}
 	else if (status3) {
 		r4c2.setAttribute('class', 'chip');
+		whosTurn(r4c2);
 	}
 	else if (status2) {
 		r3c2.setAttribute('class', 'chip');
+		whosTurn(r3c2);
 	}
 	else if (status1) {
 		r2c2.setAttribute('class', 'chip');
+		whosTurn(r2c2);
 	}
 	else {
 		r1c2.setAttribute('class', 'chip');
+		whosTurn(r1c2);
 	}
 }
 
 var placeChipColumn3 = function() {
-	var status1 = (r1c3.getAttribute('class') === "chip");
-	var status2 = (r2c3.getAttribute('class') === "chip");
-	var status3 = (r3c3.getAttribute('class') === "chip");
-	var status4 = (r4c3.getAttribute('class') === "chip");
-	var status5 = (r5c3.getAttribute('class') === "chip");
-	var status6 = (r6c3.getAttribute('class') === "chip");
+	var status1 = (r1c3.getAttribute('class') === "chip1" || r1c3.getAttribute('class') === "chip2");
+	var status2 = (r2c3.getAttribute('class') === "chip1" || r2c3.getAttribute('class') === "chip2");
+	var status3 = (r3c3.getAttribute('class') === "chip1" || r3c3.getAttribute('class') === "chip2");
+	var status4 = (r4c3.getAttribute('class') === "chip1" || r4c3.getAttribute('class') === "chip2");
+	var status5 = (r5c3.getAttribute('class') === "chip1" || r5c3.getAttribute('class') === "chip2");
+	var status6 = (r6c3.getAttribute('class') === "chip1" || r6c3.getAttribute('class') === "chip2");
 
-	if (status5) {
+	if (status6) {
+		alert('This column is full!');
+	}
+	else if (status5) {
 		r6c3.setAttribute('class', 'chip');
+		whosTurn(r6c3);
 	}
 	else if (status4) {
 		r5c3.setAttribute('class', 'chip');
+		whosTurn(r5c3);
 	}
 	else if (status3) {
 		r4c3.setAttribute('class', 'chip');
+		whosTurn(r4c3);
 	}
 	else if (status2) {
 		r3c3.setAttribute('class', 'chip');
+		whosTurn(r3c3);
 	}
 	else if (status1) {
 		r2c3.setAttribute('class', 'chip');
+		whosTurn(r2c3);
 	}
 	else {
 		r1c3.setAttribute('class', 'chip');
+		whosTurn(r1c3);
 	}
 }
 
 var placeChipColumn4 = function() {
-	var status1 = (r1c4.getAttribute('class') === "chip");
-	var status2 = (r2c4.getAttribute('class') === "chip");
-	var status3 = (r3c4.getAttribute('class') === "chip");
-	var status4 = (r4c4.getAttribute('class') === "chip");
-	var status5 = (r5c4.getAttribute('class') === "chip");
-	var status6 = (r6c4.getAttribute('class') === "chip");
+	var status1 = (r1c4.getAttribute('class') === "chip1" || r1c4.getAttribute('class') === "chip2");
+	var status2 = (r2c4.getAttribute('class') === "chip1" || r2c4.getAttribute('class') === "chip2");
+	var status3 = (r3c4.getAttribute('class') === "chip1" || r3c4.getAttribute('class') === "chip2");
+	var status4 = (r4c4.getAttribute('class') === "chip1" || r4c4.getAttribute('class') === "chip2");
+	var status5 = (r5c4.getAttribute('class') === "chip1" || r5c4.getAttribute('class') === "chip2");
+	var status6 = (r6c4.getAttribute('class') === "chip1" || r6c4.getAttribute('class') === "chip2");
 
-	if (status5) {
+	if (status6) {
+		alert('This column is full!');
+	}
+	else if (status5) {
 		r6c4.setAttribute('class', 'chip');
+		whosTurn(r6c4);
 	}
 	else if (status4) {
 		r5c4.setAttribute('class', 'chip');
+		whosTurn(r5c4);
 	}
 	else if (status3) {
 		r4c4.setAttribute('class', 'chip');
+		whosTurn(r4c4);
 	}
 	else if (status2) {
 		r3c4.setAttribute('class', 'chip');
+		whosTurn(r3c4);
 	}
 	else if (status1) {
 		r2c4.setAttribute('class', 'chip');
+		whosTurn(r2c4);
 	}
 	else {
 		r1c4.setAttribute('class', 'chip');
+		whosTurn(r1c4);
 	}
 }
 
 var placeChipColumn5 = function() {
-	var status1 = (r1c5.getAttribute('class') === "chip");
-	var status2 = (r2c5.getAttribute('class') === "chip");
-	var status3 = (r3c5.getAttribute('class') === "chip");
-	var status4 = (r4c5.getAttribute('class') === "chip");
-	var status5 = (r5c5.getAttribute('class') === "chip");
-	var status6 = (r6c5.getAttribute('class') === "chip");
+	var status1 = (r1c5.getAttribute('class') === "chip1" || r1c5.getAttribute('class') === "chip2");
+	var status2 = (r2c5.getAttribute('class') === "chip1" || r2c5.getAttribute('class') === "chip2");
+	var status3 = (r3c5.getAttribute('class') === "chip1" || r3c5.getAttribute('class') === "chip2");
+	var status4 = (r4c5.getAttribute('class') === "chip1" || r4c5.getAttribute('class') === "chip2");
+	var status5 = (r5c5.getAttribute('class') === "chip1" || r5c5.getAttribute('class') === "chip2");
+	var status6 = (r6c5.getAttribute('class') === "chip1" || r6c5.getAttribute('class') === "chip2");
 
-	if (status5) {
+	if (status6) {
+		alert('This column is full!');
+	}
+	else if (status5) {
 		r6c5.setAttribute('class', 'chip');
+		whosTurn(r6c5);
 	}
 	else if (status4) {
 		r5c5.setAttribute('class', 'chip');
+		whosTurn(r5c5);
 	}
 	else if (status3) {
 		r4c5.setAttribute('class', 'chip');
+		whosTurn(r4c5);
 	}
 	else if (status2) {
 		r3c5.setAttribute('class', 'chip');
+		whosTurn(r3c5);
 	}
 	else if (status1) {
 		r2c5.setAttribute('class', 'chip');
+		whosTurn(r2c5);
 	}
 	else {
 		r1c5.setAttribute('class', 'chip');
+		whosTurn(r1c5);
 	}
 }
 
 var placeChipColumn6 = function() {
-	var status1 = (r1c6.getAttribute('class') === "chip");
-	var status2 = (r2c6.getAttribute('class') === "chip");
-	var status3 = (r3c6.getAttribute('class') === "chip");
-	var status4 = (r4c6.getAttribute('class') === "chip");
-	var status5 = (r5c6.getAttribute('class') === "chip");
-	var status6 = (r6c6.getAttribute('class') === "chip");
+	var status1 = (r1c6.getAttribute('class') === "chip1" || r1c6.getAttribute('class') === "chip2");
+	var status2 = (r2c6.getAttribute('class') === "chip1" || r2c6.getAttribute('class') === "chip2");
+	var status3 = (r3c6.getAttribute('class') === "chip1" || r3c6.getAttribute('class') === "chip2");
+	var status4 = (r4c6.getAttribute('class') === "chip1" || r4c6.getAttribute('class') === "chip2");
+	var status5 = (r5c6.getAttribute('class') === "chip1" || r5c6.getAttribute('class') === "chip2");
+	var status6 = (r6c6.getAttribute('class') === "chip1" || r6c6.getAttribute('class') === "chip2");
 
-	if (status5) {
+	if (status6) {
+		alert('This column is full!');
+	}
+	else if (status5) {
 		r6c6.setAttribute('class', 'chip');
+		whosTurn(r6c6);
 	}
 	else if (status4) {
 		r5c6.setAttribute('class', 'chip');
+		whosTurn(r5c6);
 	}
 	else if (status3) {
 		r4c6.setAttribute('class', 'chip');
+		whosTurn(r4c6);
 	}
 	else if (status2) {
 		r3c6.setAttribute('class', 'chip');
+		whosTurn(r3c6);
 	}
 	else if (status1) {
 		r2c6.setAttribute('class', 'chip');
+		whosTurn(r2c6);
 	}
 	else {
 		r1c6.setAttribute('class', 'chip');
+		whosTurn(r1c6);
 	}
 }
 
 var placeChipColumn7 = function() {
-	var status1 = (r1c7.getAttribute('class') === "chip");
-	var status2 = (r2c7.getAttribute('class') === "chip");
-	var status3 = (r3c7.getAttribute('class') === "chip");
-	var status4 = (r4c7.getAttribute('class') === "chip");
-	var status5 = (r5c7.getAttribute('class') === "chip");
-	var status6 = (r6c7.getAttribute('class') === "chip");
+	var status1 = (r1c7.getAttribute('class') === "chip1" || r1c7.getAttribute('class') === "chip2");
+	var status2 = (r2c7.getAttribute('class') === "chip1" || r2c7.getAttribute('class') === "chip2");
+	var status3 = (r3c7.getAttribute('class') === "chip1" || r3c7.getAttribute('class') === "chip2");
+	var status4 = (r4c7.getAttribute('class') === "chip1" || r4c7.getAttribute('class') === "chip2");
+	var status5 = (r5c7.getAttribute('class') === "chip1" || r5c7.getAttribute('class') === "chip2");
+	var status6 = (r6c7.getAttribute('class') === "chip1" || r6c7.getAttribute('class') === "chip2");
 
-	if (status5) {
+	if (status6) {
+		alert('This column is full!');
+	}
+	else if (status5) {
 		r6c7.setAttribute('class', 'chip');
+		whosTurn(r6c7);
 	}
 	else if (status4) {
 		r5c7.setAttribute('class', 'chip');
+		whosTurn(r5c7);
 	}
 	else if (status3) {
 		r4c7.setAttribute('class', 'chip');
+		whosTurn(r4c7);
 	}
 	else if (status2) {
 		r3c7.setAttribute('class', 'chip');
+		whosTurn(r3c7);
 	}
 	else if (status1) {
 		r2c7.setAttribute('class', 'chip');
+		whosTurn(r2c7);
 	}
 	else {
 		r1c7.setAttribute('class', 'chip');
+		whosTurn(r1c7);
 	}
 }
 
-var allDivs = document.getElementsByTagName('td');
+var allTDs = document.getElementsByTagName('td');
 
 var reset = function() {
 	r1c1.removeAttribute('class', 'chip');
@@ -243,7 +306,6 @@ var reset = function() {
 	r6c7.removeAttribute('class', 'chip');
 }
 
-
 var button1 = document.getElementById('placeButton1');
 button1.addEventListener('click', placeChipColumn1);
 
@@ -268,8 +330,35 @@ button7.addEventListener('click', placeChipColumn7);
 var resetButton = document.getElementById('resetGame');
 resetButton.addEventListener('click', reset);
 
+var turnCounter = 1; 
 
+var whosTurn = function(input) {
+	if (turnCounter % 2 === 1) {
+		input.setAttribute('class', 'chip1');
+		whosUp();
+		return turnCounter ++;
+	}
+	else {
+		input.setAttribute('class', 'chip2');	
+		whosUp();
+		return turnCounter ++;
+	}
+}
 
+var whoIsUp = document.getElementById('whoIsUp');
+whoIsUp.textContent = ("PLAYER 1 IS UP");
+whoIsUp.setAttribute('class', 'chip1');	
+
+var whosUp = function() {
+	if (turnCounter % 2 === 0) {
+		whoIsUp.textContent = ("PLAYER 1 IS UP");
+		whoIsUp.setAttribute('class', 'chip1');		
+	}
+	else {
+		whoIsUp.textContent = ("PLAYER 2 IS UP");
+		whoIsUp.setAttribute('class', 'chip2');			
+	}
+}
 
 console.log("aww yeahh");
 

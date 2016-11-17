@@ -19,6 +19,20 @@ tr#row7 td {
 	border: none;
 }
 
-.chip {
-	background-color: black;
+.chip1 {
+	background-color: red;
+}
+
+.chip2 {
+	background-color: blue;
+}
+
+h3.chip1 {
+	background-color: gray;
+	color: red;
+}
+
+h3.chip2 {
+	background-color: gray;
+	color: blue;
 }
