@@ -10,26 +10,28 @@ div#page1 {
 	background-color: rgba(0, 0, 0, .5);
 	padding: 20px;
 	width: 700px;
-	margin: 40px auto;
+	margin: 50px auto;
 }
 
 #gameboard {
-	width: 50%;
-	margin: 0 auto;
+	width: 43.5%;
+	margin: 10px auto;
+	margin-top: 30px;
+	align-content: center;
 }
 
 table {
-	margin: 0;
-	padding: 0;
+	margin: -2px;
+	padding: -2px;
 }
 
 tr {
-	margin: 0;
-	padding: 0;
+	margin: -2px;
+	padding: -2px;
 }
 
 td {
-	border: 8px solid white;
+	border: 8px solid rgb(200, 200, 200);
 	margin: 0;
 	padding: 0;
 	height: 60px;
@@ -38,6 +40,7 @@ td {
 
 tr#row7 td {
 	border: none;
+	height: 40px;
 }
 
 .chip1 {
@@ -49,18 +52,19 @@ tr#row7 td {
 }
 
 h3 {
-	width: 220px;
+	width: 200px;
 	margin: 0 auto;
+	border-radius: 5px;
 }
 
 h3.chip1 {
-	background-color: gray;
 	color: red;
+	background-color: rgb(200, 200, 200);
 }
 
 h3.chip2 {
-	background-color: gray;
 	color: blue;
+	background-color: rgb(200, 200, 200);
 }
 
 h1 {
@@ -89,4 +93,12 @@ p {
 	font-size: 16px;
 	background-color: rgb(255, 160, 0);
 	color: white;
+}
+
+#resetGame {
+	margin-top: 20px;
+	height: 25px;
+	width: 125px;
+	border-radius: 5px;
+	background-color: white;
 }
