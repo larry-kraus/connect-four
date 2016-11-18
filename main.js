@@ -302,6 +302,8 @@ var reset = function() {
 	r4c7.removeAttribute('class');
 	r5c7.removeAttribute('class');
 	r6c7.removeAttribute('class');
+	whoIsUp.textContent = ("PLAYER 1 IS UP");
+	whoIsUp.setAttribute('class', 'chip1');
 	return turnCounter = 1;
 }
 

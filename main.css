@@ -1,7 +1,16 @@
 body {
-	background-color: gray;
+	background-image: url(space2.jpg);
+	background-position: center;
 	position: block;
 	text-align: center;
+	color: white;
+}
+
+div#page1 {
+	background-color: rgba(0, 0, 0, .5);
+	padding: 20px;
+	width: 700px;
+	margin: 40px auto;
 }
 
 #gameboard {
@@ -9,8 +18,20 @@ body {
 	margin: 0 auto;
 }
 
+table {
+	margin: 0;
+	padding: 0;
+}
+
+tr {
+	margin: 0;
+	padding: 0;
+}
+
 td {
 	border: 8px solid white;
+	margin: 0;
+	padding: 0;
 	height: 60px;
 	width: 60px;
 }
@@ -27,6 +48,11 @@ tr#row7 td {
 	background-color: blue;
 }
 
+h3 {
+	width: 220px;
+	margin: 0 auto;
+}
+
 h3.chip1 {
 	background-color: gray;
 	color: red;
@@ -35,4 +61,32 @@ h3.chip1 {
 h3.chip2 {
 	background-color: gray;
 	color: blue;
+}
+
+h1 {
+	margin: 0 auto;
+	font-family: Bungee Outline, arial;
+	font-size: 62px;
+	padding: 20px;
+}
+
+p {
+	font-family: Bungee Inline, arial;
+	width: 600px;
+	margin: 0 auto;
+	text-align: justify;
+	padding: 20px;
+	font-size: 18px;
+}
+
+#playNow {
+	height: 40px;
+	width: 200px;
+	padding: ;
+	margin: 15px auto;
+	border-radius: 10px;
+	border: ;
+	font-size: 16px;
+	background-color: rgb(255, 160, 0);
+	color: white;
 }
