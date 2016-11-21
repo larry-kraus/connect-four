@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div id="gameboard">
+		<!-- table that composes the game board -->
 		<table>
 			<tr id="row1">
 				<td id="r1c1"></td>
@@ -62,6 +63,7 @@
 				<td id="r6c6"></td>
 				<td id="r6c7"></td>
 			</tr>
+			<!-- buttons to place chips -->
 			<tr id="row7">
 				<td><button id="placeButton1" class="placeButton">Place Chip</button></td>
 				<td><button id="placeButton2" class="placeButton">Place Chip</button></td>
@@ -74,7 +76,9 @@
 		</table>
 	</div>
 	<div>
+		<!-- indication of who's turn it is -->
 		<h3 id="whoIsUp"></h3>
+		<!-- reset game button -->
 		<button id="resetGame">Reset Game</button>
 	</div>	
 	<script src="main.js"></script>

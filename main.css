@@ -6,6 +6,7 @@ body {
 	color: white;
 }
 
+/* div that contains the content of page 1 */
 div#page1 {
 	background-color: rgba(0, 0, 0, .5);
 	padding: 20px;
@@ -20,16 +21,7 @@ div#page1 {
 	align-content: center;
 }
 
-table {
-	margin: -2px;
-	padding: -2px;
-}
-
-tr {
-	margin: -2px;
-	padding: -2px;
-}
-
+/* squares on the game board */
 td {
 	border: 8px solid rgb(200, 200, 200);
 	margin: -2px;
@@ -38,11 +30,13 @@ td {
 	width: 60px;
 }
 
+/* place chip buttons on page 2 */
 tr#row7 td {
 	border: none;
 	height: 40px;
 }
 
+/* creates the "chips" */
 .chip1 {
 	background-color: red;
 }
@@ -51,6 +45,7 @@ tr#row7 td {
 	background-color: blue;
 }
 
+/* h3 element indictates who is up */
 h3 {
 	width: 200px;
 	margin: 0 auto;
@@ -68,6 +63,7 @@ h3.chip2 {
 	background-color: rgb(200, 200, 200);
 }
 
+/* big RGC4 lettering on page 1 */
 h1 {
 	margin: 0 auto;
 	font-family: Bungee Outline, arial;
@@ -75,6 +71,7 @@ h1 {
 	padding: 20px;
 }
 
+/* instructions on page 1 */
 p {
 	font-family: Bungee Inline, arial;
 	width: 600px;
@@ -84,6 +81,7 @@ p {
 	font-size: 18px;
 }
 
+/* button on page 1 */
 #playNow {
 	height: 40px;
 	width: 200px;
@@ -95,6 +93,7 @@ p {
 	border-color: rgb(200, 200, 200);
 }
 
+/* buttons for page 2 */
 .placeButton, #resetGame {
 	background-color: white;
 	border: 2px solid rgb(200, 200, 200);
@@ -106,9 +105,5 @@ p {
 	margin-top: 20px;
 	height: 25px;
 	width: 125px;
-
-}
-
-.placeButton {
 
 }

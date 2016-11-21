@@ -1,4 +1,3 @@
-//these 7 functions determine where to place each chip
 var placeChipColumn1 = function() {
 	var status1 = (r1c1.getAttribute('class') === "chip1" || r1c1.getAttribute('class') === "chip2");
 	var status2 = (r2c1.getAttribute('class') === "chip1" || r2c1.getAttribute('class') === "chip2");
@@ -261,17 +260,62 @@ var placeChipColumn7 = function() {
 var allTDs = [r1c1, r2c1, r3c1, r4c1, r5c1, r6c1, r1c2, r2c2, r3c2, r4c2, r5c2, r6c2, r1c3, r2c3, r3c3, r4c3, r5c3, r6c3, r1c4, r2c4,
 r3c4, r4c4, r5c4, r6c4, r1c5, r2c5, r3c5, r4c5, r5c5, r6c5, r1c6, r2c6, r3c6, r4c6, r5c6, r6c6, r1c7, r2c7, r3c7, r4c7, r5c7, r6c7];
 
-//functionality behind the reset button
+//document.getElementsByTagName('td');
 var reset = function() {
+
 	for (var i = 0; i < 42; i++) {
 		allTDs[i].removeAttribute('class');
 	}
+	/*
+	r1c1.removeAttribute('class');
+	r2c1.removeAttribute('class');
+	r3c1.removeAttribute('class');
+	r4c1.removeAttribute('class');
+	r5c1.removeAttribute('class');
+	r6c1.removeAttribute('class');
+	r1c2.removeAttribute('class');
+	r2c2.removeAttribute('class');
+	r3c2.removeAttribute('class');
+	r4c2.removeAttribute('class');
+	r5c2.removeAttribute('class');
+	r6c2.removeAttribute('class');
+	r1c3.removeAttribute('class');
+	r2c3.removeAttribute('class');
+	r3c3.removeAttribute('class');
+	r4c3.removeAttribute('class');
+	r5c3.removeAttribute('class');
+	r6c3.removeAttribute('class');
+	r1c4.removeAttribute('class');
+	r2c4.removeAttribute('class');
+	r3c4.removeAttribute('class');
+	r4c4.removeAttribute('class');
+	r5c4.removeAttribute('class');
+	r6c4.removeAttribute('class');
+	r1c5.removeAttribute('class');
+	r2c5.removeAttribute('class');
+	r3c5.removeAttribute('class');
+	r4c5.removeAttribute('class');
+	r5c5.removeAttribute('class');
+	r6c5.removeAttribute('class');
+	r1c6.removeAttribute('class');
+	r2c6.removeAttribute('class');
+	r3c6.removeAttribute('class');
+	r4c6.removeAttribute('class');
+	r5c6.removeAttribute('class');
+	r6c6.removeAttribute('class');
+	r1c7.removeAttribute('class');
+	r2c7.removeAttribute('class');
+	r3c7.removeAttribute('class');
+	r4c7.removeAttribute('class');
+	r5c7.removeAttribute('class');
+	r6c7.removeAttribute('class');
+	*/
+
 	whoIsUp.textContent = ("PLAYER 1 IS UP");
 	whoIsUp.setAttribute('class', 'chip1');
 	return turnCounter = 1;
 }
 
-//event listeners for the buttons
 var button1 = document.getElementById('placeButton1');
 button1.addEventListener('click', placeChipColumn1);
 
@@ -298,7 +342,6 @@ resetButton.addEventListener('click', reset);
 
 var turnCounter = 1; 
 
-//runs after a chip is placed and sets other functions in motion
 var whosTurn = function(input) {
 	if (turnCounter % 2 === 1) {
 		input.setAttribute('class', 'chip1');
@@ -318,7 +361,6 @@ var whoIsUp = document.getElementById('whoIsUp');
 whoIsUp.textContent = ("PLAYER 1 IS UP");
 whoIsUp.setAttribute('class', 'chip1');	
 
-//indicator for who is up
 var whosUp = function() {
 	if (turnCounter % 2 === 0) {
 		whoIsUp.textContent = ("PLAYER 1 IS UP");
@@ -331,7 +373,6 @@ var whosUp = function() {
 }
 
 var conclusion = function() {
-	//grabbing status of each square
 	var status111 = r1c1.getAttribute('class') === "chip1";
 	var status211 = r2c1.getAttribute('class') === "chip1";
 	var status311 = r3c1.getAttribute('class') === "chip1";
@@ -417,7 +458,6 @@ var conclusion = function() {
 	var status572 = r5c7.getAttribute('class') === "chip2";
 	var status672 = r6c7.getAttribute('class') === "chip2";
 
-	//all of the winning combinations
 	var combo1 = [status111, status121, status131, status141];
 	var combo2 = [status121, status131, status141, status151];
 	var combo3 = [status131, status141, status151, status161];
@@ -557,20 +597,18 @@ var conclusion = function() {
 	var combo137 = [status322, status432, status542, status652];
 	var combo138 = [status312, status422, status532, status642];
 
-	//array with all of the winning combinations, for access
-	var comboArray = [combo1, combo2, combo3, combo4, combo5, combo6, combo7, combo8, combo9, combo10, combo11, combo12, combo13,
-	combo14, combo15, combo16, combo17, combo18, combo19, combo20, combo21, combo22, combo23, combo24, combo25, combo26, combo27,
-	combo28, combo29, combo30, combo31, combo32, combo33, combo34, combo35, combo36, combo37, combo38, combo39, combo40, combo41,
-	combo42, combo43, combo44, combo45, combo46, combo47, combo48, combo49, combo50, combo51, combo52, combo53, combo54, combo55,
-	combo56, combo57, combo58, combo59, combo60, combo61, combo62, combo63, combo64, combo65, combo66, combo67, combo68, combo69,
-	combo70, combo71, combo72, combo73, combo74, combo75, combo76, combo77, combo78, combo79, combo80, combo81, combo82, combo83,
-	combo84, combo85, combo86, combo87, combo88, combo89, combo90, combo91, combo92, combo93, combo94, combo95, combo96, combo97,
-	combo98, combo99, combo100, combo101, combo102, combo103, combo104, combo105, combo106, combo107, combo108, combo109, combo110,
-	combo111, combo112, combo113, combo114, combo115, combo116, combo117, combo118, combo119, combo120, combo121, combo122, combo123,
-	combo124, combo125, combo126, combo127, combo128, combo129, combo130, combo131, combo132, combo133, combo134, combo135, combo136,
-	combo137, combo138];
+	var comboArray = [combo1, combo2, combo3, combo4, combo5, combo6, combo7, combo8, combo9,
+combo10, combo11, combo12, combo13, combo14, combo15, combo16, combo17, combo18, combo19, combo20, combo21, combo22, combo23, 
+combo24, combo25, combo26, combo27, combo28, combo29, combo30, combo31, combo32, combo33, combo34, combo35, combo36, 
+combo37, combo38, combo39, combo40, combo41, combo42, combo43, combo44, combo45, combo46, combo47, combo48, combo49, 
+combo50, combo51, combo52, combo53, combo54, combo55, combo56, combo57, combo58, combo59, combo60, combo61, combo62, combo63, 
+combo64, combo65, combo66, combo67, combo68, combo69, combo70, combo71, combo72, combo73, combo74, combo75, combo76, 
+combo77, combo78, combo79, combo80, combo81, combo82, combo83, combo84, combo85, combo86, combo87, combo88, combo89, combo90, 
+combo91, combo92, combo93, combo94, combo95, combo96, combo97, combo98, combo99, combo100, combo101, combo102, combo103, 
+combo104, combo105, combo106, combo107, combo108, combo109, combo110, combo111, combo112, combo113, combo114, combo115, 
+combo116, combo117, combo118, combo119, combo120, combo121, combo122, combo123, combo124, combo125, combo126, 
+combo127, combo128, combo129, combo130, combo131, combo132, combo133, combo134, combo135, combo136, combo137, combo138];
 
-	//checking to see if either player has fulfilled a winning scenario
 	for (var j = 0; j < 69; j++) {
 		if (comboArray[j][0] === true && comboArray[j][1] === true && comboArray[j][2] === true && comboArray[j][3] === true) {
 			alert("RED WINS!");
@@ -586,3 +624,61 @@ var conclusion = function() {
 		alert("The game has ended in a tie");
 	}
 }
+
+console.log("ohhh yeahh");
+
+/* code scrapyard
+var placeChipColumn1Other = function() {
+	var r1c1 = document.getElementById('r1c1');
+	r1c1.setAttribute('class', 'chip');
+
+	console.log(r1c1.getAttribute('class'));
+
+	return r1c1 = "occupied";
+}
+
+var r1c1status;
+console.log(placeChipColumn1());
+var r1c1status = function() {
+	placeChipColumn1();
+}
+console.log(r1c1status);
+
+var placeChipColumn = function() {
+	if (r1c1.getAttribute('class') === "chip") {
+		r2c1.setAttribute('class', 'chip');
+	}
+	else {
+		r1c1.setAttribute('class', 'chip');
+	}
+}
+
+var placeChipColumnXX = function() {
+	var status1 = (r1c1.getAttribute('class') === "chip");
+	var status2 = (r2c1.getAttribute('class') === "chip");
+	var status3 = (r3c1.getAttribute('class') === "chip");
+	var status4 = (r4c1.getAttribute('class') === "chip");
+	var status5 = (r5c1.getAttribute('class') === "chip");
+	var status6 = (r6c1.getAttribute('class') === "chip");
+
+	switch(status1, status2, status3, status4, status5, status6) {
+		case status5:
+			r6c1.setAttribute('class', 'chip');
+			break;
+		case status4:
+			r5c1.setAttribute('class', 'chip');
+			break;
+		case status3:
+			r4c1.setAttribute('class', 'chip');
+			break;
+		case status2:
+			r3c1.setAttribute('class', 'chip');
+			break;
+		case status1:
+			r2c1.setAttribute('class', 'chip');
+			break;
+		default:
+			r1c1.setAttribute('class', 'chip');
+	}
+}
+*/
