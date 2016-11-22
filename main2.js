@@ -627,7 +627,7 @@ combo127, combo128, combo129, combo130, combo131, combo132, combo133, combo134, 
 
 	for (var j = 0; j < 69; j++) {
 		if (comboArray[j][0] === true && comboArray[j][1] === true && comboArray[j][2] === true && comboArray[j][3] === true) {
-			alert("RED WINS!");
+			winner1();
 		}
 	}
 	for (var j = 69; j < 138; j++) {
@@ -640,6 +640,14 @@ combo127, combo128, combo129, combo130, combo131, combo132, combo133, combo134, 
 		alert("The game has ended in a tie");
 	}
 }
+
+var winner1 = function() {
+	var notification = document.createElement('div');
+	notification.textContent = "RED WINS!!";
+	document.appendChild('notification');
+
+}
+winner1();
 
 console.log("ohhh yeahh");
 
