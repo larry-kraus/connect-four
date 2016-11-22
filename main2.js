@@ -1,3 +1,19 @@
+var column1 = [r1c1, r2c1, r3c1, r4c1, r5c1, r6c1];
+
+var placeChipColumn = function() {
+	var status1 = (column1[0].getAttribute('class') === "chip1" || column1[0].getAttribute('class') === "chip2");
+	var status2 = (r2c1.getAttribute('class') === "chip1" || r2c1.getAttribute('class') === "chip2");
+	var status3 = (r3c1.getAttribute('class') === "chip1" || r3c1.getAttribute('class') === "chip2");
+	var status4 = (r4c1.getAttribute('class') === "chip1" || r4c1.getAttribute('class') === "chip2");
+	var status5 = (r5c1.getAttribute('class') === "chip1" || r5c1.getAttribute('class') === "chip2");
+	var status6 = (r6c1.getAttribute('class') === "chip1" || r6c1.getAttribute('class') === "chip2");
+}
+
+var checker = function() {
+	column1[0].getAttribute('class') === "chip1";
+}
+checker();
+
 var placeChipColumn1 = function() {
 	var status1 = (r1c1.getAttribute('class') === "chip1" || r1c1.getAttribute('class') === "chip2");
 	var status2 = (r2c1.getAttribute('class') === "chip1" || r2c1.getAttribute('class') === "chip2");
